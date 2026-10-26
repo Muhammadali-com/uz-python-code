@@ -27,7 +27,7 @@ jobs:
         run: python -m pip install --upgrade build pytest
 
       - name: Run tests
-        run: python -m pytest -q
+        run: python -m pytest -q --import-mode=importlib tests/
 
       - name: Build package
         run: python -m build
