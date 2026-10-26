@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uz-python-code"
+version = "1.0.0"
+description = "O‘zbekcha kalit so‘zlar orqali Python kodini yozish va ishga tushirish vositasi"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "UzCodepackage"}]
+keywords = ["uzbek", "python", "translator", "education", "uzcodepackage"]
+classifiers = ["Development Status :: 5 - Production/Stable", "Intended Audience :: Education", "License :: OSI Approved :: MIT License", "Programming Language :: Python :: 3", "Programming Language :: Python :: 3 :: Only", "Topic :: Education", "Topic :: Software Development :: Interpreters"]
+
+[project.scripts]
+uzpy = "uz_python_code.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["uz_python_code*"]
